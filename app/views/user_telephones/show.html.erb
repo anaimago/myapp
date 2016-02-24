@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @user_telephone.phone_number %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @user_telephone.state %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_telephone.user_id %>
+</p>
+
+<p>
+  <strong>Phone type:</strong>
+  <%= @user_telephone.phone_type %>
+</p>
+
+<p>
+  <strong>Phone device:</strong>
+  <%= @user_telephone.phone_device %>
+</p>
+
+<p>
+  <strong>Phone number short:</strong>
+  <%= @user_telephone.phone_number_short %>
+</p>
+
+<%= link_to 'Edit', edit_user_telephone_path(@user_telephone) %> |
+<%= link_to 'Back', user_telephones_path %>
