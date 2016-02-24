@@ -15,3 +15,67 @@
  *= require foundation_and_overrides
  *= require font-awesome
  */
+
+body {
+	font-size: 1em;
+	color:#828c95;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#828c95+0,828c95+0,434f56+100 */
+	background: rgb(130,140,149); /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, rgba(130,140,149,1) 0%, rgba(130,140,149,1) 0%, rgba(67,79,86,1) 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(130,140,149,1) 0%,rgba(130,140,149,1) 0%,rgba(67,79,86,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, rgba(130,140,149,1) 0%,rgba(130,140,149,1) 0%,rgba(67,79,86,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#828c95', endColorstr='#434f56',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+	
+
+.h11 {
+	position: relative;
+    margin-left: 10%;
+    color: red;
+	text-shadow:2px 2px 2px #000000;
+}
+
+.prozor{
+	
+	position: relative;
+    color: white;
+	text-shadow:2px 2px 2px #000000;
+	}
+
+.tablica {
+    margin:5%;
+    text-align: center;
+    background-color: white;
+	border:inset 2px #1959fc;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright:5px;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+	}
+
+.top-bar{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f3f3+50,ededed+51,ffffff+100;White+Gloss+%232 */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+img  {
+    float: left;
+    margin: 20px;
+
+}
+
+p {font-size: 1em}
+

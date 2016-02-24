@@ -1,34 +1,62 @@
-<p id="notice"><%= notice %></p>
+  <nav class="top-bar" data-topbar role="navigation">
+    <h1 class="h11"><a href="#">Imenik</a></h1>
+  </nav>
 
-<p>
-  <strong>Phone number:</strong>
-  <%= @user_telephone.phone_number %>
-</p>
+    <!-- razmak između zaglavlja i ostatka-->
+    <br />
+    <br />
 
-<p>
-  <strong>State:</strong>
-  <%= @user_telephone.state %>
-</p>
+  <div class="row medium-6 large-4 small-6 columns prozor">
+    <div> 
+      <img class="thumbnail" src="http://placehold.it/550x550"  style="width:200px;height:250px;"/>
+    </div>
 
-<p>
-  <strong>User:</strong>
-  <%= @user_telephone.user_id %>
-</p>
+    <div >
 
-<p>
-  <strong>Phone type:</strong>
-  <%= @user_telephone.phone_type %>
-</p>
+      <br />
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Phone device:</strong>
-  <%= @user_telephone.phone_device %>
-</p>
+      <p>
+        <strong>Korisnik:</strong>
+        <%= @user_telephone.user_id %>
+      </p>
 
-<p>
-  <strong>Phone number short:</strong>
-  <%= @user_telephone.phone_number_short %>
-</p>
+      <p>
+        <strong>Ime i prezime:</strong>
+        <%= @user_telephone.phone_type %>
+      </p>
+      
+      <p>
+        <strong>Broj mobitela:</strong>
+        <%= @user_telephone.phone_number %>
+      </p>
 
-<%= link_to 'Edit', edit_user_telephone_path(@user_telephone) %> |
-<%= link_to 'Back', user_telephones_path %>
+      <p>
+        <strong>Skraćeni broj:</strong>
+        <%= @user_telephone.phone_number_short %>
+      </p>
+
+      <p>
+        <strong>Broj telefona:</strong>
+        <%= @user_telephone.phone_device %>
+      </p>
+
+      <p>
+        <strong>E-mail:</strong>
+        <%= @user_telephone.state %>
+      </p>
+    </div>
+
+    <br />
+    <br />
+
+    <div align="right" >
+    <%= link_to 'Uredi', edit_user_telephone_path(@user_telephone) %> |    |      
+    <%= link_to 'Nazad', user_telephones_path %>
+    </div>
+
+  </div>
+
+
+
+
