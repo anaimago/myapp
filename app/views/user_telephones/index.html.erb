@@ -1,10 +1,73 @@
   <nav class="top-bar" data-topbar role="navigation">
-    <h1 class="zaglavlje">Imenik</h1>
+    <div class="row">
+      <div class="medium-8 columns">
+        <h1 class="zaglavlje">Imenik</h1>
+      </div>
+      <div class="medium-4 columns dolje">
+        <form id="subForm" method="post">
+          <div class="row collapse margintop-20px">
+            <div class="small-8 medium-8 columns">
+              <input type="text" placeholder="Pretraga">
+            </div>
+            <div class="small-4 medium-4 columns">
+              <input class="postfix button" type="submit" value="Traži" href="#">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </nav>
 
   <p id="notice"><%= notice %></p>
 
-    <!-- razmak između zaglavlja i ostatka-->
+  <div class="tabovi krug">   
+    <ul class="tabs" data-tabs id="example-tabs">
+      <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Broj telefona</a></li>
+      <li class="tabs-title"><a href="#panel2">Adresa</a></li>
+      <li class="tabs-title"><a href="#panel3">Korisnik</a></li>
+      <li class="tabs-title"><a href="#panel4">Vrsta telefona</a></li>
+      <li class="tabs-title"><a href="#panel5">Uređaj</a></li>
+      <li class="tabs-title"><a href="#panel6">Kratki broj</a></li>
+    </ul>
+    <div class="tabs-content sredina" data-tabs-content="example-tabs">
+
+      <div class="tabs-panel is-active" id="panel1">
+        <% @user_telephones.each do |user_telephone| %>
+          <p><%= user_telephone.phone_number %></p>
+        <% end %>
+      </div>
+      <div class="tabs-panel" id="panel2"> 
+        <% @user_telephones.each do |user_telephone| %>  <p><%= user_telephone.state %></p>
+        <% end %>
+      </div>
+      <div class="tabs-panel" id="panel3">
+        <% @user_telephones.each do |user_telephone| %>
+          <p><%= user_telephone.user_id %></p>
+        <% end %>
+      </div>
+      <div class="tabs-panel" id="panel4">
+        <% @user_telephones.each do |user_telephone| %>
+          <p><%= user_telephone.phone_type %></p>
+        <% end %>
+      </div>
+      <div class="tabs-panel" id="panel5">
+        <% @user_telephones.each do |user_telephone| %>
+          <p><%= user_telephone.phone_device %></p>
+        <% end %>
+      </div>
+      <div class="tabs-panel" id="panel6">
+        <% @user_telephones.each do |user_telephone| %>
+          <p><%= user_telephone.phone_number_short %></p>
+         <% end %>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
 
 
 <div class="tablica">

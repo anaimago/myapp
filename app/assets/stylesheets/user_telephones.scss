@@ -1,3 +1,56 @@
 // Place all the styles related to the UserTelephones controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tabovi {
+	margin:5%;
+	align:center;
+	}
+
+.tabs {border-radius:15px 15px 0 0;}
+
+.tabs li {
+	width: 16.66%;
+	text-align: center;
+	}
+
+.tabs-title > a:hover {
+    background: #fefefe;
+    border-radius:15px 15px 0 0;
+    color: #000000;
+    text-shadow:1px 1px 1px #595959;}
+
+.tabs-title > a:focus, .tabs-title > a[aria-selected='true'] {
+      background: #000;
+      color: #fff;
+      border-radius:15px 15px 0 0; }
+
+.tabs-content{border-radius:0 0 15px 15px}
+
+.sredina {
+	margin:auto;
+	text-align: center;
+	}
+
+.tabs-title > a {
+    color: #444444;
+    font-size: 1em;
+    padding: 1.25rem;
+}
+
+.krug{
+    border:solid 2px #000000;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+
+}
+.tabs-panel{
+	border-radius:0 0 15px 15px;
+}
+
+.tabs-panel.is-active {
+    display: block; 
+	background: #000;
+    color: #fff;
+	}
