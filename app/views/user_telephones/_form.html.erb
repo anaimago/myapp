@@ -1,3 +1,4 @@
+
 <%= form_for(@user_telephone) do |f| %>
   <% if @user_telephone.errors.any? %>
     <div id="error_explanation">
@@ -11,31 +12,68 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :phone_number %><br>
-    <%= f.text_field :phone_number %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :phone_type %><br>
-    <%= f.text_field :phone_type %>
-  </div>
-  <div class="field">
-    <%= f.label :phone_device %><br>
-    <%= f.text_field :phone_device %>
-  </div>
-  <div class="field">
-    <%= f.label :phone_number_short %><br>
-    <%= f.number_field :phone_number_short %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <br />
+
+
+<!-- stara forma
+
+  <div class="tablica2 ">
+    <div class="field">
+      <%= f.label :phone_number %>
+      <%= f.text_field :phone_number %>
+    </div>
+    <div class="field">
+      <%= f.label :state %>
+      <%= f.text_field :state %>
+    </div>
+    <div class="field">
+      <%= f.label :user_id %>
+      <%= f.number_field :user_id %>
+    </div>
+    <div class="field">
+      <%= f.label :phone_type %>
+      <%= f.text_field :phone_type %>
+    </div>
+    <div class="field">
+      <%= f.label :phone_device %>
+      <%= f.text_field :phone_device %>
+    </div>
+    <div class="field">
+      <%= f.label :phone_number_short %>
+      <%= f.number_field :phone_number_short %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Potvrdi" %>
+    </div>
   </div>
 <% end %>
+
+d-->
+
+<div class="tablica3">
+    <div class="field">
+      <input type="text" name="user_telephone[phone_number]" placeholder="Broj mobitela">
+    </div>
+    <div class="field">
+      <input type="text" name="user_telephone[state]" placeholder="Adresa">
+    </div>
+    <div class="field">
+      <input type="number" name="user_telephone[user_id]" placeholder="Korisnik">
+    </div>
+    <div class="field">
+      <input type="text" name="user_telephone[phone_type]" placeholder="Vrsta telefona">
+    </div>
+    <div class="field">
+      <input type="text" name="user_telephone[state]" placeholder="Adresa">
+    </div>
+    <div class="field">
+      <input type="text" name="user_telephone[phone_device]" placeholder="Vrsta mobitela">
+    </div>
+    <div class="field">
+      <input type="text" name="user_telephone[phone_number_short]" placeholder="Kratki broj">
+    </div>
+
+  </div>
+
+

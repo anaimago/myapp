@@ -1,20 +1,22 @@
   <nav class="top-bar" data-topbar role="navigation">
-    <h1 class="h11"><a href="#">Imenik</a></h1>
+    <h1 class="zaglavlje">Imenik</h1>
   </nav>
 
     <!-- razmak između zaglavlja i ostatka-->
     <br />
+    <p class="prozor" align="center" id="notice"><%= notice %></p>
     <br />
+
+   
 
   <div class="row medium-6 large-4 small-6 columns prozor">
     <div> 
-      <img class="thumbnail" src="http://placehold.it/550x550"  style="width:200px;height:250px;"/>
+      <img class="thumbnail slika" src="http://placehold.it/550x550"  style="width:200px;height:250px;"/>
     </div>
 
     <div >
 
-      <br />
-      <p id="notice"><%= notice %></p>
+      <br/>
 
       <p>
         <strong>Korisnik:</strong>
@@ -50,7 +52,7 @@
     <br />
     <br />
 
-    <div align="right" >
+    <div class="nazad" align="right" >
     <%= link_to 'Uredi', edit_user_telephone_path(@user_telephone) %> |    |      
     <%= link_to 'Nazad', user_telephones_path %>
     </div>

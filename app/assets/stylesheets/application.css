@@ -11,9 +11,10 @@
  * file per style scope.
  *
  *= require_tree .
- *= require_self
  *= require foundation_and_overrides
  *= require font-awesome
+ *= require_self
+
  */
 
 body {
@@ -27,15 +28,15 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#828c95', endColorstr='#434f56',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
 	
 
-.h11 {
+/* tekst u zaglavlju */
+.zaglavlje {
 	position: relative;
     margin-left: 10%;
-    color: red;
+    color: #A30016;
 	text-shadow:2px 2px 2px #000000;
 }
 
 .prozor{
-	
 	position: relative;
     color: white;
 	text-shadow:2px 2px 2px #000000;
@@ -68,10 +69,9 @@ body {
 	background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 
-
 }
 
-img  {
+.slika  {
     float: left;
     margin: 20px;
 
@@ -79,3 +79,40 @@ img  {
 
 p {font-size: 1em}
 
+.nazad {color: black;}
+
+/* foundation promjena */
+a {color: #CBCBCB;}
+
+.tablica2 {
+	width: 50%;
+    margin:auto;
+    text-align: center;
+    background-color: white;
+	border:inset 2px #1959fc;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright:5px;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+	}
+
+
+/*forma novi broj*/
+.tablica3 {
+	width: 50%;
+    margin:auto;
+    padding:3px;
+    text-align: center;
+	}
+
+/* gornji red tablica */
+.gred {color:black;
+	}

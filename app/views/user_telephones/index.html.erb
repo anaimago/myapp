@@ -1,43 +1,47 @@
-<p id="notice"><%= notice %></p>
+  <nav class="top-bar" data-topbar role="navigation">
+    <h1 class="zaglavlje">Imenik</h1>
+  </nav>
 
-<h1 class="h11">Telefonski imenik</h1>
+  <p id="notice"><%= notice %></p>
+
+    <!-- razmak između zaglavlja i ostatka-->
+
 
 <div class="tablica">
   <table>
-    <thead>
-      <tr>
-        <th>Broj telefona</th>
-        <th>Adresa</th>
-        <th>Korisnik</th>
-        <th>Vrsta telefona</th>
-        <th>Uređaj</th>
-        <th>Kratki broj</th>
-      </tr>
-    </thead>
+    <tr class="gred">
+      <th>Broj telefona</th>
+      <th>Adresa</th>
+      <th>Korisnik</th>
+      <th>Vrsta telefona</th>
+      <th>Uređaj</th>
+      <th>Kratki broj</th>
+    </tr>
 
-    <tbody>
-      <% @user_telephones.each do |user_telephone| %>
-        <tr>
-          <td><%= user_telephone.phone_number %></td>
-          <td><%= user_telephone.state %></td>
-          <td><%= user_telephone.user_id %></td>
-          <td><%= user_telephone.phone_type %></td>
-          <td><%= user_telephone.phone_device %></td>
-          <td><%= user_telephone.phone_number_short %></td>
+    <% @user_telephones.each do |user_telephone| %>
 
-        </tr>
-          
+    <tr>
+      <td><%= user_telephone.phone_number %></td>
+      <td><%= user_telephone.state %></td>
+      <td><%= user_telephone.user_id %></td>
+      <td><%= user_telephone.phone_type %></td>
+      <td><%= user_telephone.phone_device %></td>
+      <td><%= user_telephone.phone_number_short %></td>
+
+    </tr>
+      
+
+    <tr>
+      <td><%= link_to 'Prikaži', user_telephone %>
+      </td>
+      <td><%= link_to 'Uredi', edit_user_telephone_path(user_telephone) %></td>
+      <td><%= link_to 'Obriši', user_telephone, method: :delete, data: { confirm: 'Sigurno?' } %></td>
+    </tr>
+  <% end %>
     
-        <tr>
-          <td><%= link_to 'Prikaži', user_telephone %>
-          </td>
-          <td><%= link_to 'Uredi', edit_user_telephone_path(user_telephone) %></td>
-          <td><%= link_to 'Obriši', user_telephone, method: :delete, data: { confirm: 'Sigurno?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
   </table>
 </div>
-<br>
 
-<%= link_to 'Novi telefon', new_user_telephone_path %>
+  <div class="nazad prozor" align="center">
+    <%= link_to 'Novi telefon', new_user_telephone_path %>
+  </div>
