@@ -1,16 +1,28 @@
-  <nav class="top-bar" data-topbar role="navigation">
-    <h1 class="zaglavlje">Novi broj</h1>
-  </nav>
+<nav class="top-bar" data-topbar role="navigation">
+  <div>
+    <div class="medium-8 columns">
+      <h1 class="zaglavlje">Novi broj</h1>
+    </div>
+
+    <div class="large-2 medium-4 columns">
+      <form id="subForm" method="post">
+        <div class="row collapse margintop-20px">
+          <div class="small-8 medium-8 columns">
+            <input type="text" placeholder="Pretraga">
+          </div>
+          <div class="small-4 medium-4 columns">
+            <input class="button" type="submit" value="Traži" href="#">
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</nav>
+
 
 <%= render 'form' %>
 
 <br />
 
-
-
-
-<div class=" a" align="center" >
-    <input type="submit" name="commit" value="Potvrdi"> |    |      
-    <a href="/user_telephones">Nazad</a>
-</div>
 

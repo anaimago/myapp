@@ -1,110 +1,137 @@
-  <nav class="top-bar" data-topbar role="navigation">
-    <div class="row">
-      <div class="medium-8 columns">
-        <h1 class="zaglavlje">Imenik</h1>
-      </div>
-      <div class="medium-4 columns dolje">
-        <form id="subForm" method="post">
-          <div class="row collapse margintop-20px">
-            <div class="small-8 medium-8 columns">
-              <input type="text" placeholder="Pretraga">
-            </div>
-            <div class="small-4 medium-4 columns">
-              <input class="postfix button" type="submit" value="Traži" href="#">
-            </div>
-          </div>
-        </form>
-      </div>
+<nav class="top-bar" data-topbar role="navigation">
+  <div>
+    <div class="medium-8 columns">
+      <h1 class="zaglavlje">Imenik</h1>
     </div>
-  </nav>
 
-  <p id="notice"><%= notice %></p>
+    <div class="large-2 medium-4 columns">
+      <form id="subForm" method="post">
+        <div class="row collapse margintop-20px">
+          <div class="small-8 medium-8 columns">
+            <input type="text" placeholder="Pretraga">
+          </div>
+          <div class="small-4 medium-4 columns">
+            <input class="button" type="submit" value="Traži" href="#">
+          </div>
+        </div>
+      </form>
+    </div>
 
-  <div class="tabovi krug">   
-    <ul class="tabs" data-tabs id="example-tabs">
-      <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Broj telefona</a></li>
-      <li class="tabs-title"><a href="#panel2">Adresa</a></li>
-      <li class="tabs-title"><a href="#panel3">Korisnik</a></li>
-      <li class="tabs-title"><a href="#panel4">Vrsta telefona</a></li>
-      <li class="tabs-title"><a href="#panel5">Uređaj</a></li>
-      <li class="tabs-title"><a href="#panel6">Kratki broj</a></li>
-    </ul>
-    <div class="tabs-content sredina" data-tabs-content="example-tabs">
+  </div>
+</nav>
 
-      <div class="tabs-panel is-active" id="panel1">
-        <% @user_telephones.each do |user_telephone| %>
-          <p><%= user_telephone.phone_number %></p>
-        <% end %>
-      </div>
-      <div class="tabs-panel" id="panel2"> 
-        <% @user_telephones.each do |user_telephone| %>  <p><%= user_telephone.state %></p>
-        <% end %>
-      </div>
-      <div class="tabs-panel" id="panel3">
-        <% @user_telephones.each do |user_telephone| %>
-          <p><%= user_telephone.user_id %></p>
-        <% end %>
-      </div>
-      <div class="tabs-panel" id="panel4">
-        <% @user_telephones.each do |user_telephone| %>
-          <p><%= user_telephone.phone_type %></p>
-        <% end %>
-      </div>
-      <div class="tabs-panel" id="panel5">
-        <% @user_telephones.each do |user_telephone| %>
-          <p><%= user_telephone.phone_device %></p>
-        <% end %>
-      </div>
-      <div class="tabs-panel" id="panel6">
-        <% @user_telephones.each do |user_telephone| %>
-          <p><%= user_telephone.phone_number_short %></p>
-         <% end %>
-      </div>
+<p id="notice"><%= notice %></p>
 
+<div class="tabovi krug">   
+  <ul class="tabs" data-tabs id="example-tabs">
+    <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Broj telefona</a></li>
+    <li class="tabs-title"><a href="#panel2">Adresa</a></li>
+    <li class="tabs-title"><a href="#panel3">Korisnik</a></li>
+    <li class="tabs-title"><a href="#panel4">Vrsta telefona</a></li>
+    <li class="tabs-title"><a href="#panel5">Uređaj</a></li>
+    <li class="tabs-title"><a href="#panel6">Kratki broj</a></li>
+  </ul>
+
+  <div class="tabs-content sredina">
+    <div class="tabs-panel is-active" id="panel1">
+      <% @user_telephones.each do |user_telephone| %>
+        <p><%= user_telephone.phone_number %></p>
+      <% end %>
+    </div>
+    <div class="tabs-panel" id="panel2"> 
+      <% @user_telephones.each do |user_telephone| %>  <p><%= user_telephone.state %></p>
+      <% end %>
+    </div>
+    <div class="tabs-panel" id="panel3">
+      <% @user_telephones.each do |user_telephone| %>
+        <p><%= user_telephone.user_id %></p>
+      <% end %>
+    </div>
+    <div class="tabs-panel" id="panel4">
+      <% @user_telephones.each do |user_telephone| %>
+        <p><%= user_telephone.phone_type %></p>
+      <% end %>
+    </div>
+    <div class="tabs-panel" id="panel5">
+      <% @user_telephones.each do |user_telephone| %>
+        <p><%= user_telephone.phone_device %></p>
+      <% end %>
+    </div>
+    <div class="tabs-panel" id="panel6">
+      <% @user_telephones.each do |user_telephone| %>
+        <p><%= user_telephone.phone_number_short %></p>
+       <% end %>
     </div>
   </div>
-
-
-
-
-
-
-
-<div class="tablica">
-  <table>
-    <tr class="gred">
-      <th>Broj telefona</th>
-      <th>Adresa</th>
-      <th>Korisnik</th>
-      <th>Vrsta telefona</th>
-      <th>Uređaj</th>
-      <th>Kratki broj</th>
-    </tr>
-
-    <% @user_telephones.each do |user_telephone| %>
-
-    <tr>
-      <td><%= user_telephone.phone_number %></td>
-      <td><%= user_telephone.state %></td>
-      <td><%= user_telephone.user_id %></td>
-      <td><%= user_telephone.phone_type %></td>
-      <td><%= user_telephone.phone_device %></td>
-      <td><%= user_telephone.phone_number_short %></td>
-
-    </tr>
-      
-
-    <tr>
-      <td><%= link_to 'Prikaži', user_telephone %>
-      </td>
-      <td><%= link_to 'Uredi', edit_user_telephone_path(user_telephone) %></td>
-      <td><%= link_to 'Obriši', user_telephone, method: :delete, data: { confirm: 'Sigurno?' } %></td>
-    </tr>
-  <% end %>
-    
-  </table>
 </div>
 
-  <div class="nazad prozor" align="center">
+
+<div class="sredina">
+  <div class="button">
     <%= link_to 'Novi telefon', new_user_telephone_path %>
   </div>
+</div>
+
+
+
+<!--  stara tablica
+
+.tablica {
+  margin:5%;
+  text-align: center;
+  background-color: white;
+  border:inset 2px #1959fc;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright:5px;
+  -moz-border-radius-bottomleft:5px;
+  -moz-border-radius-bottomright:5px;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px;
+  -webkit-border-bottom-left-radius:5px;
+  -webkit-border-bottom-right-radius:5px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  }
+
+<div class="tablica">
+<table>
+  <tr class="gred">
+    <th>Broj telefona</th>
+    <th>Adresa</th>
+    <th>Korisnik</th>
+    <th>Vrsta telefona</th>
+    <th>Uređaj</th>
+    <th>Kratki broj</th>
+  </tr>
+
+  <% @user_telephones.each do |user_telephone| %>
+
+  <tr>
+    <td><%= user_telephone.phone_number %></td>
+    <td><%= user_telephone.state %></td>
+    <td><%= user_telephone.user_id %></td>
+    <td><%= user_telephone.phone_type %></td>
+    <td><%= user_telephone.phone_device %></td>
+    <td><%= user_telephone.phone_number_short %></td>
+
+  </tr>
+    
+
+  <tr>
+    <td><%= link_to 'Prikaži', user_telephone %>
+    </td>
+    <td><%= link_to 'Uredi', edit_user_telephone_path(user_telephone) %></td>
+    <td><%= link_to 'Obriši', user_telephone, method: :delete, data: { confirm: 'Sigurno?' } %></td>
+  </tr>
+<% end %>
+  
+</table>
+</div>
+
+-->
+
+
+
+

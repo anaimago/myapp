@@ -1,4 +1,24 @@
 
+
+
+<br />
+
+<div class="tablica3">
+<%= simple_form_for @user_telephone do |f| %>
+  <%= f.input :phone_number, label: false, placeholder: "Broj mobitela"%>
+  <%= f.input :state, label: false, placeholder: "Adresa"%>
+  <%= f.input :user_id, label: false, placeholder: "Korisnik"%>
+  <%= f.input :phone_device, label: false, placeholder: "Vrsta telefona" %>
+  <%= f.input :phone_number_short, label: false, placeholder: "Kratki broj" %>
+  <%= f.button :submit, "Spremi" %>
+<% end %>
+</div>
+
+
+
+
+<!-- stara forma
+
 <%= form_for(@user_telephone) do |f| %>
   <% if @user_telephone.errors.any? %>
     <div id="error_explanation">
@@ -15,7 +35,10 @@
   <br />
 
 
-<!-- stara forma
+
+
+
+
 
   <div class="tablica2 ">
     <div class="field">
@@ -49,7 +72,26 @@
   </div>
 <% end %>
 
-d-->
+.tablica2 {
+    width: 50%;
+    margin:auto;
+    text-align: center;
+    background-color: white;
+    border:inset 2px #1959fc;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright:5px;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    }
+
 
 <div class="tablica3">
     <div class="field">
@@ -75,5 +117,31 @@ d-->
     </div>
 
   </div>
+
+<div class="tablica3">
+    <div class="field">
+      <input type="text" name="user_telephone[phone_number]" placeholder="Broj mobitela">
+    </div>
+    <div class="field">
+      <input type="text" name="user_telephone[state]" placeholder="Adresa">
+    </div>
+    <div class="field">
+      <input type="number" name="user_telephone[user_id]" placeholder="Korisnik">
+    </div>
+    <div class="field">
+      <input type="text" name="user_telephone[phone_type]" placeholder="Vrsta telefona">
+    </div>
+    <div class="field">
+      <input type="text" name="user_telephone[state]" placeholder="Adresa">
+    </div>
+    <div class="field">
+      <input type="text" name="user_telephone[phone_device]" placeholder="Vrsta mobitela">
+    </div>
+    <div class="field">
+      <input type="text" name="user_telephone[phone_number_short]" placeholder="Kratki broj">
+    </div>
+
+  </div>
+-->
 
 
