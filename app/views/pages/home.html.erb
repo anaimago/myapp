@@ -1,46 +1,122 @@
 <nav class="top-bar" data-topbar role="navigation">
   <div>
     <div class="medium-8 columns">
-      <h1 class="zaglavlje2">Korisnici</h1>
+      <h1 class="zaglavlje2">Home</h1>
     </div>
   </div>
 </nav>
 
 <br />
 
-<div class="tablica3 tabb">
-  <table id="myTable" class="display responsive no-wrap">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Radi</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
+<div class="row">
 
-    <tbody>
-      <% @users.each do |user| %>
-        <tr>
-          <td><%= user.name %></td>
-          <td><%= user.email %></td>
-          <td><%= link_to 'Show', user , :remote=> true %></td>
-          <td><%= link_to 'Edit', edit_user_path(user) , :remote=> true %></td>
-          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } , :remote=> true %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div> 
+  <div class="medium-6 large-4 columns">
+    <div class="callout-card success radius">
+      <div class="card-label">
+        <div class="label-text">close
+        </div>
+      </div>
+      <div class="callout-card-content">
+        <h3 class="lead"> Imenik </h3>
+        <p>Kad se stisne na imenik trebao bi otvoriti pop-up s tablicom.</p>
+      </div>
+    </div>
 
-<br>
+    <div class="callout-card success radius">
+      <div class="card-label">
+        <div class="label-text">close
+        </div>
+      </div>
+      <div class="callout-card-content">
+        <h3 class="lead">Korisnici</h3>
+        <p>Kad se stisne na close trebao bi zatvoriti prozor.</p>
+      </div>
+    </div>
 
-<div class="sredina">
-<%= link_to 'New User', new_user_path , :remote=> true %>
+    <div class="callout-card success radius">
+      <div class="card-label">
+        <div class="label-text">
+          close
+        </div>
+      </div>
+      <div class="callout-card-content">
+        <h3 class="lead">Kalendar</h3>
+        <p>Tu ce jednom u buducnosti bit kalendar</p>
+      </div>
+    </div>
 
-<%= fa_icon "camera-retro" %>
+    <div class="callout-card success radius">
+      <div class="card-label">
+        <div class="label-text">
+          close
+        </div>
+      </div>
+      <div class="callout-card-content">
+        <h3 class="lead">Sat</h3>
+        <p>In the near future, crime is patrolled by a mechanized police force. When one police droid, Chappie, is stolen and given new programming, he becomes the first robot with the ability to think and feel for himself.</p>
+      </div>
+    </div>
+  </div>
 
+  <div class="large-8 small-12 medium-6 columns">
+    <div class="callout-card success radius"style="margin-bottom:0px;">
+      <div class="card-label">
+        <div class="label-text">close
+        </div>
+      </div>
+      <div class="callout-card-content">
+        <h3 class="lead">Široka kocka</h3>
+        <p>Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond. After 10 years of operation and visitor rates declining, in order to fulfill a corporate mandate, a new attraction is created to re-spark visitor's interest, which backfires horribly.
+        </p>
+      </div>
+    </div>
+
+    <div class="large-6 medium-6 columns" style="padding-left:0px;">
+      <div class="callout-card success radius">
+        <div class="card-label">
+          <div class="label-text">
+            Close
+          </div>
+        </div>
+        <div class="callout-card-content">
+          <h3 class="lead">Ime i prezime</h3>
+          <img src="http://img2.wikia.nocookie.net/__cb20090309234126/starwars/images/e/ee/DeathStar2.jpg" alt="death star" />
+          <p>The Death Star was a moon-sized Imperial military battlestation armed with a planet-destroying superlaser.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="large-6 medium-6 columns" style="padding-right:0px;">
+      <div class="callout-card success radius">
+        <div class="card-label">
+          <div class="label-text">
+            Close
+          </div>
+        </div>
+        <div class="callout-card-content">
+          <h3 class="lead">minesweeper</h3>
+          <img src="http://img2.wikia.nocookie.net/__cb20090309234126/starwars/images/e/ee/DeathStar2.jpg" alt="death star" />
+          <p>The Death Star was a moon-sized Imperial military battlestation armed with a planet-destroying superlaser.</p>
+        </div>
+      </div>
+    </div> 
+
+    <div class="callout-card success radius">
+      <div class="card-label">
+        <div class="label-text">close
+        </div>
+      </div>
+      <div class="callout-card-content">
+        <h3 class="lead">Društvene mreže</h3>
+        <p>Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond. After 10 years of operation and visitor rates declining, in order to fulfill a corporate mandate, a new attraction is created to re-spark visitor's interest, which backfires horribly.
+        </p>
+      </div>
+    </div>
+
+  </div>
 </div>
-<p id="notice"><%= notice %></p>
+
+
+
+ 
 

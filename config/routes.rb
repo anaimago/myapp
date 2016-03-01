@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   resources :microposts
   resources :users
 
+  get '/home' => 'pages#home'
+  get '/dashboard' => 'pages#dashboard'
+  get '/dashboard_duo' => 'pages#dashboard_duo'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

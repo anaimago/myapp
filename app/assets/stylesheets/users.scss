@@ -16,22 +16,63 @@
 	position: relative;
   	margin-left: 10%;
   	color: #3F3F3F;
-	text-shadow:2px 2px 1px #eee;
+	text-shadow:2px 2px 1px #87D37C;
 	}
 
 body {
 	font-size: 1em;
-	background: rgb(255,255,255);
-	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(238,239,241,1) 100%);
-	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(238,239,241,1) 100%);
-	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(238,239,241,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeff1',GradientType=0 );	 background-position: right top;
- 	background-attachment: fixed;
+	background: rgb(0,150,40);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(0,150,40,1) 0%, rgba(0,87,20,1) 69%, rgba(0,46,8,1) 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,150,40,1) 0%,rgba(0,87,20,1) 69%,rgba(0,46,8,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(0,150,40,1) 0%,rgba(0,87,20,1) 69%,rgba(0,46,8,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009628', endColorstr='#002e08',GradientType=1 );
+	background-attachment: fixed;
 	}
 
+.row{width:95%;
+	max-width: 100rem;
+	}
 
+.callout-card {
+  background: white;
+  border: 1px solid #333;
+  box-shadow: 2px 2px 3px #3F3F3F;
+  margin: 1rem 0;
+  overflow: hidden; }
 
+  .callout-card:hover {
+  	box-shadow: 2px 2px 3px #000;}
+  .callout-card .card-label {
+    border-color: transparent #333 transparent transparent;
+    border-color: rgba(255, 255, 255, 0) #333333 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+  .callout-card.success {
+    border-color: #87d37c; }
+    .callout-card.success .card-label {
+      border-color: transparent #87d37c transparent transparent;
+      border-color: rgba(255, 255, 255, 0) #87d37c rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
+  .callout-card .card-label {
+    border-style: solid;
+    border-width: 0 70px 40px 0;
+    float: right;
+    height: 0px;
+    width: 0px;
+    transform: rotate(360deg); }
+  .callout-card .callout-card-content {
+    padding: 0.5rem 1.5rem 0.875rem; }
+  .callout-card.radius {
+    border-radius: 0.6rem; }
+  .callout-card .label-text {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    position: relative;
+    right: -40px;
+    top: 2px;
+    white-space: nowrap;
+    transform: rotate(30deg); }
 
+.label-text:hover {
+    text-shadow: 1px 1px 2px #000; }
 
 
 
