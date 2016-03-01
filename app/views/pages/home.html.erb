@@ -1,0 +1,46 @@
+<nav class="top-bar" data-topbar role="navigation">
+  <div>
+    <div class="medium-8 columns">
+      <h1 class="zaglavlje2">Korisnici</h1>
+    </div>
+  </div>
+</nav>
+
+<br />
+
+<div class="tablica3 tabb">
+  <table id="myTable" class="display responsive no-wrap">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Radi</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= link_to 'Show', user , :remote=> true %></td>
+          <td><%= link_to 'Edit', edit_user_path(user) , :remote=> true %></td>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } , :remote=> true %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div> 
+
+<br>
+
+<div class="sredina">
+<%= link_to 'New User', new_user_path , :remote=> true %>
+
+<%= fa_icon "camera-retro" %>
+
+</div>
+<p id="notice"><%= notice %></p>
+
