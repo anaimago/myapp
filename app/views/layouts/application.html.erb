@@ -7,13 +7,14 @@
     <title><%= content_for?(:title) ? yield(:title) : "anina aplikacija" %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-
+<div id="scajax"></div>
     <%= yield %>
 
+<%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
   </body>
 </html>

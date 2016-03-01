@@ -29,6 +29,8 @@ gem 'font-awesome-rails'
 
 gem 'simple_form'
 
+gem 'jquery-datatables-rails', '~> 3.3.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -43,6 +45,7 @@ group :development, :test do
   gem 'byebug'
   gem "better_errors"
   gem "binding_of_caller"
+  gem "scajax"
 end
 
 group :development do

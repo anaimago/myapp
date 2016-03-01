@@ -11,50 +11,71 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require dataTables/extras/dataTables.responsive
+ *= require dataTables/jquery.dataTables.foundation
+ *= require dataTables/extras/dataTables.tableTools
  *= require foundation_and_overrides
  *= require font-awesome
  *= require_self
 
- */
+*= require dataTables/extras/dataTables.autoFill
+*= require dataTables/extras/dataTables.colReorder
+*= require dataTables/extras/dataTables.colVis
+*= require dataTables/extras/dataTables.fixedColumns
+*= require dataTables/extras/dataTables.fixedHeader
+*= require dataTables/extras/dataTables.keyTable
+*= require dataTables/extras/dataTables.scroller
+*= require dataTables/extras/dataTables.tableTools
+*= require dataTables/extras/dataTables.responsive
 
+ */
+ 
+
+/*
 body {
 	font-size: 1em;
 	color:#828c95;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100 */
-    background: rgb(169,3,41); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+  background: -moz-linear-gradient(top,  rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%); 
+  background: -webkit-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); 
+  background: linear-gradient(to bottom,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); 
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
 }
-	
+*/
+
+.sredina {
+  margin:auto;
+  text-align: center;
+  }
 
 /* tekst u zaglavlju */
 .zaglavlje {
 	position: relative;
-    margin-left: 10%;
-    color: #A30016;
+  margin-left: 10%;
+  color: #A30016;
 	text-shadow:2px 2px 2px #000000;
 }
 
 .prozor{
 	position: relative;
-    color: white;
+  color: white;
 	text-shadow:2px 2px 2px #000000;
 	}
 
-.top-bar{
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f3f3+50,ededed+51,ffffff+100;White+Gloss+%232 */
-	background: #ffffff; /* Old browsers */
-	background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-}
+/* navigacijski bar - srebrni 
+top-bar{
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%); 
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); 
+	background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); 
+}*/
 
 .slika  {
-    float: left;
-    margin: 20px;
+  float: left;
+  margin: 20px;
 
 }
 
@@ -66,18 +87,15 @@ p {font-size: 1em}
 a {color: #fff;}
 
 a:hover{
-    color: #fff;
+  color: #fff;
 }
-
-
 
 /*forma novi broj*/
 .tablica3 {
-	width: 50%;
-    margin:auto;
-    padding:3px;
-    text-align: center;
-    border-radius: 5px;
+	width: 70%;
+  margin:auto;
+  padding:3px;
+  border-radius: 5px;
 	}
 
 /* gornji red tablica */
@@ -85,30 +103,49 @@ a:hover{
 	}
 
 .button{
-
-    padding:       10px 20px;
-    text-shadow:   1px 1px 1px #000;
-    font-size:1em;
-    background:    #f3f3f3;
-    background:    -webkit-linear-gradient(#ccc, #f3f3f3 50%, #ccc);
-    background:    linear-gradient(#ccc, #f3f3f3 50%, #ccc);
-    border:        1px solid #999;
-    border-radius: 5px;
-    color:         #fff;
-    }
+  padding:       10px 20px;
+  text-shadow:   1px 1px 1px #000;
+  font-size:     1em;
+  background:    #f3f3f3;
+  background:    -webkit-linear-gradient(#ccc, #f3f3f3 50%, #ccc);
+  background:    linear-gradient(#ccc, #f3f3f3 50%, #ccc);
+  border:        1px solid #999;
+  border-radius: 5px;
+  color:         #fff;
+  }
 
 .button:hover {
-    background:    #eee;
-    background:    -webkit-linear-gradient(#999, #eee 50%, #999);
-    background:    linear-gradient(#999, #eee 50%, #999);
-    color:         #fff;
-}
+  background:    #eee;
+  background:    -webkit-linear-gradient(#999, #eee 50%, #999);
+  background:    linear-gradient(#999, #eee 50%, #999);
+  color:         #fff;
+  }
 
 .top-bar input {
-    width: auto;
+  width: auto;
     }
 
 [type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'],
 textarea {
-   border-radius: 5px;
+  border-radius: 5px;
 }
+
+.tablica {
+  margin:5%;
+  text-align: center;
+  background-color: white;
+  border:inset 2px #1959fc;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright:5px;
+  -moz-border-radius-bottomleft:5px;
+  -moz-border-radius-bottomright:5px;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px;
+  -webkit-border-bottom-left-radius:5px;
+  -webkit-border-bottom-right-radius:5px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  }
+

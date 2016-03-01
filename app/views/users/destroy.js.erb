@@ -1,0 +1,3 @@
+		$('table tr td').find('a[href="/users/<%= @user.id %>"]').parent().parent()
+		.remove();
+		$('#scajax').html('');

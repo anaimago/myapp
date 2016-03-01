@@ -12,8 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require dataTables/jquery.dataTables
+//= require dataTables/extras/dataTables.responsive
+//= require dataTables/jquery.dataTables.foundation
 //= require foundation
-//= require turbolinks
+// require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(document).ready(function(){
+    $('#myTable').DataTable({
+        "order": [[ 1, "desc" ]]
+    });
+});
