@@ -33,7 +33,7 @@
       </div>
       <div class="callout-card-content">
         <h3 class="lead">Korisnici</h3>
-        <p>Kad se stisne na close trebao bi zatvoriti prozor.</p>
+        <%= pie_chart User.group_by_month(:created_at).count, library: {legend: {position: "bottom"}} %>
       </div>
     </div> 
 
@@ -44,8 +44,9 @@
         </div>
       </div>
       <div class="callout-card-content">
-        <h3 class="lead">Kalendar</h3>
-        <p>Tu ce jednom u buducnosti bit kalendar</p>
+        <h3 class="lead">Graf</h3>
+        
+        <%= line_chart User.group_by_day(:created_at).count %>
 
       </div>
     </div>
@@ -70,41 +71,31 @@
         </div>
       </div>
       <div class="callout-card-content">
-        <h3 class="lead">E-mail</h3>
-        <p>Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond. After 10 years of operation and visitor rates declining, in order to fulfill a corporate mandate, a new attraction is created to re-spark visitor's interest, which backfires horribly.
-        </p>
+        <h3 class="lead">Tablica</h3>
+        <table id="myTable" class="display responsive no-wrap">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Radi</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
 
-
-<div class="tablica3 tabb">
-  <table id="myTable" class="display responsive no-wrap">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Radi</th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @users.each do |user| %>
-        <tr>
-          <td><%= user.name %></td>
-          <td><%= user.email %></td>
-          <td><%= link_to 'Show', user , :remote=> true %></td>
-          <td><%= link_to 'Edit', edit_user_path(user) , :remote=> true %></td>
-          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } , :remote=> true %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div> 
-
-
-
-
-  </div>
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td><%= link_to 'Show', user , :remote=> true %></td>
+                <td><%= link_to 'Edit', edit_user_path(user) , :remote=> true %></td>
+                <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } , :remote=> true %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <div class="large-6 medium-6 columns" style="padding-left:0px;">
@@ -117,7 +108,7 @@
         <div class="callout-card-content">
           <h3 class="lead">Ime i prezime</h3>
           <img src="http://img2.wikia.nocookie.net/__cb20090309234126/starwars/images/e/ee/DeathStar2.jpg" alt="death star" />
-          <p>The Death Star was a moon-sized Imperial military battlestation armed with a planet-destroying superlaser.</p>
+
         </div>
       </div>
     </div>
@@ -131,9 +122,8 @@
         </div>
         <div class="callout-card-content">
           <h3 class="lead">Novosti</h3>
-          <%= pie_chart User.group_by_day(:created_at).count %>
-
-          <p> <br/> Ovdje bi se trebale prikazati obavijest; kolektivni godišnji, promjene u firmi... </p>
+          <p>The Death Star was a moon-sized Imperial military battlestation armed with a planet-destroying superlaser.</p>
+          
         </div>
       </div>
     </div> 
@@ -144,13 +134,12 @@
         </div>
       </div>
       <div class="callout-card-content">
-      <%= timeline [
-  ["Washington", "1789-04-29", "1797-03-03"],
-  ["Adams", "1797-03-03", "1801-03-03"],
-  ["Jefferson", "1801-03-03", "1809-03-03"]
-] %>
 
-        <h3 class="lead">Društvene mreže</h3>
+        <%= month_calendar do |date| %>
+          <%= date %>
+        <% end %>
+
+        
           <a><%= fa_icon "facebook-square 4x" %></a>
           <a><%= fa_icon "twitter-square 4x" %></a>
           <a><%= fa_icon "linkedin-square 4x" %></a>
