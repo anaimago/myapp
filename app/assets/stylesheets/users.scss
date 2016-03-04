@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*home */
+/*home
 .top-bar{
 	background: rgb(63,63,63);
 	background: -moz-linear-gradient(top, rgba(63,63,63,1) 0%, rgba(0,0,0,1) 46%, rgba(1,1,1,1) 50%, rgba(10,10,10,1) 53%, rgba(33,33,33,1) 87%, rgba(0,0,0,1) 100%);
@@ -12,29 +12,24 @@
 	}
 
 
-/* tekst u zaglavlju */
 .zaglavlje2 {
-	position: relative;
+  position: relative;
   margin-left: 10%;
   color: #3F3F3F;
-	text-shadow:2px 2px 1px #87D37C;
-	}
+  text-shadow:2px 2px 1px #87D37C;
+  }
 
-body {
-	font-size: 1em;
-	background: rgb(0,150,40);
-	background: -moz-radial-gradient(center, ellipse cover, rgba(0,150,40,1) 0%, rgba(0,87,20,1) 69%, rgba(0,46,8,1) 100%);
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,150,40,1) 0%,rgba(0,87,20,1) 69%,rgba(0,46,8,1) 100%);
-	background: radial-gradient(ellipse at center, rgba(0,150,40,1) 0%,rgba(0,87,20,1) 69%,rgba(0,46,8,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009628', endColorstr='#002e08',GradientType=1 );
-	background-attachment: fixed;
-	}
+  body {
+  font-size: 1em;
+  background: rgb(0,150,40);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0,150,40,1) 0%, rgba(0,87,20,1) 69%, rgba(0,46,8,1) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,150,40,1) 0%,rgba(0,87,20,1) 69%,rgba(0,46,8,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(0,150,40,1) 0%,rgba(0,87,20,1) 69%,rgba(0,46,8,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009628', endColorstr='#002e08',GradientType=1 );
+  background-attachment: fixed;
+  }
 
-.row{width:95%;
-	max-width: 100rem;
-	}
-
-.callout-card {
+  .callout-card {
   background: white;
   border: 1px solid #333;
   box-shadow: 2px 2px 3px #3F3F3F;
@@ -42,7 +37,7 @@ body {
   overflow: hidden; }
 
   .callout-card:hover {
-  	box-shadow: 2px 2px 3px #000;}
+    box-shadow: 2px 2px 3px #000;}
   .callout-card .card-label {
     border-color: transparent #333 transparent transparent;
     border-color: rgba(255, 255, 255, 0) #333333 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0); }
@@ -75,5 +70,143 @@ body {
 .label-text:hover {
     text-shadow: 1px 1px 2px #000; }
 
-    
+  */ 
+
+/* dashboard 
+.top-bar{
+background: rgb(0,0,0);
+background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(8,64,64,1) 13%, rgba(0,0,0,1) 100%);
+background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(8,64,64,1) 13%,rgba(0,0,0,1) 100%);
+background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(8,64,64,1) 13%,rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 );
+-moz-box-shadow:inset 0px -16px 43px #000000;
+-webkit-box-shadow:inset 0px -16px 43px #000000;
+box-shadow:inset 0px -16px 43px #000000;
+
+}
+
+.zaglavlje2 {
+	position: relative;
+  margin-left: 10%;
+  color: #000;
+	text-shadow: 2px 2px 1px #fff;
+	}
+
+body {
+	font-size: 1em;
+background-color: #000;
+}
+
+.row{width:95%;
+	max-width: 100rem;
+	}
+
+.callout-card {
+  background: #084040;
+  margin: 1rem 0;
+  overflow: hidden; }
+
+.callout-card:hover {
+  box-shadow: 1px 1px 5px #084040;}
+
+.callout-card .callout-card-content {
+  padding: 0.9rem 1.5rem 0.875rem; }
+
+.callout-card.radius {
+  border-radius: 0.3rem; }
+
+.vrhkocke{
+  background: rgb(14,109,109);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(14,109,109,1) 37%, rgba(8,64,64,1) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(14,109,109,1) 37%,rgba(8,64,64,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(14,109,109,1) 37%,rgba(8,64,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e6d6d', endColorstr='#084040',GradientType=1 );
+  height:35px;
+  color: #fff; 
+  }
+
+.lead{
+  font-weight: bold;
+  }
+.lead:hover{
+  text-shadow: 1px 1px 5px #000;
+  font-size: 130%;
+}
+
+*/
+
+/* dashboard_duo */
+.top-bar{
+background: rgb(0,0,0);
+background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(8,64,64,1) 13%, rgba(0,0,0,1) 100%);
+background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(8,64,64,1) 13%,rgba(0,0,0,1) 100%);
+background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(8,64,64,1) 13%,rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 );
+-moz-box-shadow:inset 0px -16px 43px #000000;
+-webkit-box-shadow:inset 0px -16px 43px #000000;
+box-shadow:inset 0px -16px 43px #000000;
+
+}
+
+.zaglavlje2 {
+  position: relative;
+  margin-left: 10%;
+  color: #000;
+  text-shadow: 2px 2px 1px #fff;
+  }
+
+body {
+  font-size: 1em;
+   background: rgb(14,109,109);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(14,109,109,1) 37%, rgba(8,64,64,1) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(14,109,109,1) 37%,rgba(8,64,64,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(14,109,109,1) 37%,rgba(8,64,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e6d6d', endColorstr='#084040',GradientType=1 );
+  }
+
+.row{width:95%;
+  max-width: 100rem;
+  }
+
+
+.callout-card {
+  background: white;
+  border: 1px solid #333;
+  box-shadow: 2px 2px 3px #3F3F3F;
+  margin: 1rem 0;
+  overflow: hidden; }
+
+.callout-card:hover {
+  box-shadow: 2px 2px 3px #000;}
+
+.callout-card .callout-card-content {
+  padding: 0.9rem 1.5rem 0.875rem; }
+
+.callout-card.radius {
+  border-radius: 0.3rem; }
+
+.vrhkocke{
+  background: rgb(14,109,109);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(14,109,109,1) 37%, rgba(8,64,64,1) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(14,109,109,1) 37%,rgba(8,64,64,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(14,109,109,1) 37%,rgba(8,64,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e6d6d', endColorstr='#084040',GradientType=1 );
+ 
+  -moz-box-shadow:inset 0px -16px 43px #000000;
+-webkit-box-shadow:inset 0px -16px 43px #000000;
+  box-shadow:inset 0px -16px 43px #000000;
+
+
+  height:35px;
+  color: #fff; 
+  }
+
+.lead{
+  font-weight: bold;
+
+  }
+.lead:hover{
+  text-shadow: 1px 1px 5px #fff;
+  font-size: 130%;
+}
 

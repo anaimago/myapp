@@ -1,0 +1,136 @@
+<%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
+<nav class="top-bar" data-topbar role="navigation">
+  <div>
+    <div class="medium-8 columns">
+      <h1 class="zaglavlje2">Dashboard</h1>
+    </div>
+  </div>
+</nav>
+
+<br />
+
+<div class="row sredina">
+
+  <div class="medium-6 large-4 columns">
+    <div class="callout-card radius">
+      <div class="vrhkocke">
+        <h3 class="lead"> Imenik </h3>
+      </div>
+      <div class="callout-card-content">
+        <p>Kad se stisne na imenik trebao bi otvoriti pop-up s tablicom.</p>
+        <div id="scajax">
+        <%= link_to 'Novi korisnik', new_user_path , :remote=> true %>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-card radius">
+      <div class="vrhkocke">
+        <h3 class="lead"> Korisnici </h3>
+      </div>
+      <div class="callout-card-content">
+        <%= pie_chart User.group_by_month(:created_at).count, library: {legend: {position: "bottom"}} %>
+      </div>
+    </div> 
+
+    <div class="callout-card radius">
+      <div class="vrhkocke">
+        <h3 class="lead"> Graf </h3>
+      </div>
+      <div class="callout-card-content">
+        <%= line_chart User.group_by_day(:created_at).count %>
+      </div>
+    </div>
+
+    <div class="callout-card radius">
+      <div class="vrhkocke">
+        <h3 class="lead"> Sat </h3>
+      </div>
+      <div class="callout-card-content">
+        <p>In the near future, crime is patrolled by a mechanized police force. When one police droid, Chappie, is stolen and given new programming, he becomes the first robot with the ability to think and feel for himself.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="large-8 small-12 medium-6 columns">
+    <div class="callout-card radius" style="margin-bottom:0px;">
+      <div class="vrhkocke">
+        <h3 class="lead"> Tablica </h3>
+      </div>
+      <div class="callout-card-content">
+        <table id="myTable" class="display responsive no-wrap">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Radi</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td><%= link_to 'Show', user , :remote=> true %></td>
+                <td><%= link_to 'Edit', edit_user_path(user) , :remote=> true %></td>
+                <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } , :remote=> true %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="large-6 medium-6 columns" style="padding-left:0px;">
+      <div class="callout-card radius">
+        <div class="vrhkocke">
+          <h3 class="lead"> Ime i prezime </h3>
+        </div>
+        <div class="callout-card-content">
+          <img src="http://img2.wikia.nocookie.net/__cb20090309234126/starwars/images/e/ee/DeathStar2.jpg" alt="death star" />
+
+        </div>
+      </div>
+    </div>
+
+    <div class="large-6 medium-6 columns" style="padding-right:0px;">
+      <div class="callout-card radius">
+        <div class="vrhkocke">
+          <h3 class="lead"> Novosti</h3>
+        </div>
+        <div class="callout-card-content">
+          <p>The Death Star was a moon-sized Imperial military battlestation armed with a planet-destroying superlaser.</p>
+          
+        </div>
+      </div>
+    </div> 
+
+    <div style="clear:both" class="callout-card radius">
+      <div class="vrhkocke">
+        <h3 class="lead"> Kalendar</h3>
+      </div>
+      <div class="callout-card-content">
+
+        <%= month_calendar do |date| %>
+          <%= date %>
+        <% end %>
+
+        
+          <a><%= fa_icon "facebook-square 4x" %></a>
+          <a><%= fa_icon "twitter-square 4x" %></a>
+          <a><%= fa_icon "linkedin-square 4x" %></a>
+          <a><%= fa_icon "instagram 4x" %></a>
+          <a><%= fa_icon "google-plus-square 4x" %></a> 
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+ 
+
