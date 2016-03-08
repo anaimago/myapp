@@ -2,9 +2,9 @@
 
 <br/>
 
-<nav data-topbar role="navigation">
-  <div class="row sredina vrhstranice callout-card radius">
-    <h1 class="zaglavlje2">Dashboard_duo</h1>
+<nav>
+  <div class="row sredina vrhkocke callout-card radius">
+    <h1 class="zaglavlje2">Dashboard_tres</h1>
   </div>
 </nav>
 
@@ -13,20 +13,48 @@
 
 <div class="row sredina">
 
-  <div class="medium-6 large-4 columns">
-    <div class="callout-card radius">
-      <div class="vrhkocke">
+  <div class="medium-6 large-6 small-12 columns" style="padding-right:0.5px;">
+    <div class="large-6 medium-6 columns" style="padding:0px;">
+      <div class="callout-card radius visina ">
+        <div class="vrhkocke">
         <h3 class="lead"> Imenik </h3>
-      </div>
-      <div class="callout-card-content">
-        <p>Kad se stisne na imenik trebao bi otvoriti pop-up s tablicom.</p>
-        <div id="scajax">
-        <%= link_to 'Novi korisnik', new_user_path , :remote=> true %>
+        </div>
+        <div class="callout-card-content">
+          <p>Kad se stisne na imenik trebao bi otvoriti pop-up s tablicom.</p>
+          <div id="scajax">
+          <%= link_to 'Novi korisnik', new_user_path , :remote=> true %>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="callout-card radius">
+    <div class="large-6 medium-6 columns visina" style="padding-right:0px;">
+      <div class="callout-card radius visina">
+        <div class="vrhkocke">
+          <h3 class="lead"> Novosti</h3>
+        </div>
+        <div class="callout-card-content">
+          <p>The Death Star was a moon-sized Imperial military battlestation armed with a planet-destroying superlaser.</p>
+        </div>
+      </div>
+    </div> 
+
+    <div style="clear:both" class="callout-card radius visina">
+      <div class="vrhkocke">
+        <h3 class="lead"> Profil </h3>
+      </div>
+      <div class="callout-card-content">
+
+ 
+          <%= link_to 'Show', @user %>
+
+
+ 
+
+      </div>
+    </div>
+
+    <div class="callout-card radius visina">
       <div class="vrhkocke">
         <h3 class="lead"> Korisnici </h3>
       </div>
@@ -35,7 +63,7 @@
       </div>
     </div> 
 
-    <div class="callout-card radius">
+    <div class="callout-card radius visina">
       <div class="vrhkocke">
         <h3 class="lead"> Graf </h3>
       </div>
@@ -44,7 +72,7 @@
       </div>
     </div>
 
-    <div class="callout-card radius">
+    <div class="callout-card radius visina">
       <div class="vrhkocke">
         <h3 class="lead"> Sat </h3>
       </div>
@@ -54,7 +82,17 @@
     </div>
   </div>
 
-  <div class="large-8 small-12 medium-6 columns">
+  <div class="large-6 small-12 medium-6 columns">
+    <div class="callout-card radius visina">
+      <div class="vrhkocke">
+        <h3 class="lead"> Korisnici </h3>
+      </div>
+      <div class="callout-card-content">
+
+        <%= area_chart User.group_by_day(:created_at).count, library: {legend: {position: "bottom"}} %>
+      </div>
+    </div> 
+
     <div class="callout-card radius" style="margin-bottom:0px;">
       <div class="vrhkocke">
         <h3 class="lead"> Tablica </h3>
@@ -86,8 +124,8 @@
       </div>
     </div>
 
-    <div class="large-6 medium-6 columns" style="padding-left:0px;">
-      <div class="callout-card radius">
+    <div class="large-6 medium-6 columns" style="padding:0px;">
+      <div class="callout-card radius visina">
         <div class="vrhkocke">
           <h3 class="lead"> Ime i prezime </h3>
         </div>
@@ -98,14 +136,13 @@
       </div>
     </div>
 
-    <div class="large-6 medium-6 columns" style="padding-right:0px;">
-      <div class="callout-card radius">
+    <div class="large-6 medium-6 columns visina" style="padding-right:0px;">
+      <div class="callout-card radius visina">
         <div class="vrhkocke">
           <h3 class="lead"> Novosti</h3>
         </div>
         <div class="callout-card-content">
           <p>The Death Star was a moon-sized Imperial military battlestation armed with a planet-destroying superlaser.</p>
-          
         </div>
       </div>
     </div> 
@@ -131,8 +168,4 @@
 
   </div>
 </div>
-
-
-
- 
 

@@ -71,8 +71,14 @@
 <div class="sredina">
   <div class="button">
     <%= link_to 'Novi telefon', new_user_telephone_path %>
+
+    <%= link_to "PDF", user_telephone_path(@user_telephone, :format => 'pdf', :id=>31) %>
+
+
+
   </div>
 </div>
+
 
 
 

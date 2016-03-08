@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   resources :users
 
   get '/home' => 'pages#home'
+  get '/home_duo' => 'pages#home_duo'
+  get '/home_tres' => 'pages#home_tres'
   get '/dashboard' => 'pages#dashboard'
   get '/dashboard_duo' => 'pages#dashboard_duo'
+  get '/dashboard_tres' => 'pages#dashboard_tres'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

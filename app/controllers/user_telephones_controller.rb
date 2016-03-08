@@ -71,4 +71,19 @@ class UserTelephonesController < ApplicationController
     def user_telephone_params
       params.require(:user_telephone).permit(:phone_number, :state, :user_id, :phone_type, :phone_device, :phone_number_short)
     end
+
+  prawnto :prawn => { :top_margin => 75 }
+
+  def show
+    @user_telephone = UserTelephone.find(params[:id])
+    respond_to do |format|
+    format.html # show.html.erb
+    format.xml  { render :xml => @user_telephone }
+    format.pdf { render :layout => false } # Add this line
+    
+  end
+end
+
+
+
 end
